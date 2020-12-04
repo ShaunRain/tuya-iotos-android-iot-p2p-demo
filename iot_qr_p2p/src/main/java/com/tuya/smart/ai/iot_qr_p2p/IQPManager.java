@@ -74,7 +74,7 @@ public class IQPManager {
                 Log.w(TAG, String.format("onP2PSignal: %s %s", id, msg));
                 try {
                     JSONObject jsonObject = new JSONObject(msg);
-                    String signaling = jsonObject.getJSONObject("data").getString("signaling");
+                    String signaling = jsonObject.getJSONObject("data").toString();
                     p2PSDKManager.setSignaling(id, signaling);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -208,14 +208,7 @@ public class IQPManager {
 
             @Override
             public void onSignaling(String id, String signaling) {
-                JSONObject jsonObject = new JSONObject();
-                try {
-                    jsonObject.put("id", id);
-                    jsonObject.put("signaling", signaling);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                ioTSDKManager.sendMqtt(302, jsonObject.toString());
+                ioTSDKManager.sendMqtt(302, signaling);
             }
 
             @Override
