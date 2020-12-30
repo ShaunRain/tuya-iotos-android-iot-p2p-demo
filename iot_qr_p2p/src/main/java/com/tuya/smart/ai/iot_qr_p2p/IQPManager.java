@@ -1,14 +1,7 @@
 package com.tuya.smart.ai.iot_qr_p2p;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
-import android.util.Base64;
 import android.util.Log;
-import android.util.Pair;
-import android.util.SparseIntArray;
-import android.view.View;
 
 import com.tuya.smart.p2p_sdk.P2PSDKManager;
 import com.tuya.smart.p2p_sdk.interfaces.IP2PCallback;
@@ -18,10 +11,6 @@ import com.tuya.smartai.iot_sdk.IoTSDKManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Map;
-
-import io.reactivex.disposables.Disposable;
 
 public class IQPManager {
 

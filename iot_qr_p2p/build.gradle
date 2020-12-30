@@ -34,7 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api 'com.tuya.smart:tuyasmart-iot_sdk:1.0.8.8'
-    api 'com.tuya.smart:tuyasmart-p2p_sdk:0.1.1'
+    api 'com.tuya.smart:tuyasmart-p2p_sdk:0.1.5'
 //    api project(':p2p_sdk')
 //    api project(':iot_sdk')
 }
@@ -46,7 +46,7 @@ publish {
     repoName = 'sdk'
     groupId = 'com.tuya.smart'
     artifactId = 'tuyasmart-iot_qr_p2p_sdk'
-    publishVersion = '0.0.4'
+    publishVersion = '0.0.8'
     desc = 'Android Device IoT QR P2P SDK'
     bintrayUser = 'tuyasmartai'
     bintrayKey = '52a72bc89fcada12be3f14797588b4a9c0d9833a'
